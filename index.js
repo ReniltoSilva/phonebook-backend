@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const app = express();
+app.use(express.static("dist"));
 app.use(cors());
 
 //Middleware to log details of the request
@@ -54,10 +55,6 @@ app.get("/info", (req, res) => {
     `<p>Phonebook has info for ${entries} people</p>
     <p>${time}<p/>`
   );
-});
-
-app.get("/", (req, res) => {
-  res.send("Hello, backend is working");
 });
 
 //Get list of items
