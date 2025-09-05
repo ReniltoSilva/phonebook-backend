@@ -56,6 +56,10 @@ app.get("/info", (req, res) => {
   );
 });
 
+app.get("/", (req, res) => {
+  res.json(persons);
+});
+
 //Get list of items
 app.get("/api/persons/", (req, res) => {
   res.json(persons);
