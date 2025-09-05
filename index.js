@@ -56,6 +56,10 @@ app.get("/info", (req, res) => {
   );
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello, backend is working");
+});
+
 //Get list of items
 app.get("/api/persons/", (req, res) => {
   res.json(persons);
