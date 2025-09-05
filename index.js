@@ -57,7 +57,7 @@ app.get("/info", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.json(persons);
+  res.send("Hello, backend is working");
 });
 
 //Get list of items
