@@ -2,7 +2,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 
 mongoose.set("strictQuery", false);
-const url = process.env.MONGODB_URI;
+const url = process.env.PHONEBOOK_MONGODB_URI;
 
 mongoose
   .connect(url)
